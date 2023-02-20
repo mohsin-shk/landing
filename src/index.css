@@ -1,13 +1,68 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+
+@layer components {
+  body {
+    @apply  overflow-x-hidden
+  }
+
+  .mini-navtitle {
+    @apply px-6 w-full py-4 hover:text-[#ff90e8] cursor-pointer text-lg
+  }
+
+  .nav-btn {
+    @apply border-x-2 border-black px-14 cursor-pointer py-5 hover:bg-[#FF90E8]
+  }
+
+  .risk-bits-section {
+    @apply items-center justify-center flex flex-col w-full py-36 px-3 bg-[#B23386]
+  }
+
+  .risk-bits-text {
+    @apply text-6xl leading-[80px]
+  }
+
+  .callout {
+    @apply text-left text-black z-10 w-[35%] -ml-48 rounded-lg bg-white border-2 border-black px-4 py-8 text-2xl -mb-12
+  }
+
+  .selling-btn {
+    @apply px-12 text-lg font-medium py-4 bg-black text-white border border-black
+  }
+
+  .navbar {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+  }
+
+  .navlink {
+    background-image:
+      linear-gradient(transparent 0%,
+        transparent 90%,
+        black 90%,
+        black 100%);
+    background-repeat: no-repeat;
+    background-size: 0% 20%;
+    background-position-x: right;
+    background-position-y: bottom;
+    transition: background-size 300ms;
+  }
+
+  .navlink:hover {
+    background-size: 100% 20%;
+    background-position-x: left;
+  }
+
+  .tag-btn {
+    @apply px-2 border-black bg-gray-100 text-black text-sm mr-2 rounded-full py-1 border hover:-translate-y-2 transition-all ease-in-out duration-300 hover:-translate-x-2
+  }
+
+  .tag-btn-below {
+    @apply bg-black text-black tag-btn
+  }
 }
